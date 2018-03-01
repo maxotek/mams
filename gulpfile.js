@@ -1,7 +1,25 @@
 "use strict";
 
 var gulp = require("gulp"),
-    eslint = require("gulp-eslint");
+    eslint = require("gulp-eslint"),
+    replace = require("gulp-regex-replace"),
+    fs = require("fs");
+
+gulp.task("package", () => {
+    var packageFile = "./package.json";
+
+    if (!fs.existsSync(packageFile)) {
+        console.error("package.json missing");
+        process.exit(-1);
+    }
+
+    var pkg = JSON.parse(fs.readFileSync(packageFile));
+
+    return gulp.src("src/seeder.js")
+        .pipe(replace({ regex: "pkg\\.version", replace: pkg.version }))
+        .pipe(replace({ regex: "pkg\\.seederRepo", replace: pkg.seederRepo }))
+        .pipe(gulp.dest("src"));
+});
 
 gulp.task("lint", () => {
     // ESLint ignores files with "node_modules" paths.

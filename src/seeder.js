@@ -9,16 +9,8 @@ var packageUpdater = require("./package-metadata-updater");
 
 logger.init();
 
-var packageFile = "./package.json";
-
-if (!fs.existsSync(packageFile)) {
-    console.error("package.json missing");
-    process.exit(-1);
-}
-
-var pkg = JSON.parse(fs.readFileSync(packageFile));
-var version = pkg.version;
-var seederRepo = pkg.seederRepo;
+var version = "pkg.version";
+var seederRepo = "pkg.seederRepo";
 
 if (!seederRepo) {
     console.error("Seeder repository URL was not found");

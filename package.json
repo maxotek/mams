@@ -1,21 +1,22 @@
 {
   "name": "mams",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates seed project for re-usable AngularJS modules",
   "repository": "https://github.com/maxotek/mams",
   "license": "MIT",
   "scripts": {
-    "prepublish": "gulp"
+    "prepublish": "gulp lint package"
   },
   "bin": {
     "mams": "./bin/mams.js"
   },
   "main": "./src/seeder.js",
   "devDependencies": {
+    "eslint": "4.18.1",
     "gulp": "^3.9.1",
     "gulp-eslint": "4.0.2",
-    "eslint": "4.18.1"
+    "gulp-regex-replace": "^0.2.3"
   },
   "dependencies": {
     "commander": "2.14.1",
