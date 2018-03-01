@@ -31,7 +31,7 @@ console.info("Maxotek Angular Module Seeder v " + version);
 var projectName = program.project;
 var projectDesc = program.desc;
 var createGithubRepo = program.createGithubRepo;
-var outputFileName = projectName + ".js";
+var outputFileName = program.outputFile ? program.outputFile : projectName + ".js";
 
 if (!projectName) {
     console.error("No project name was specified");
