@@ -1,7 +1,7 @@
 {
   "name": "mams",
   "private": false,
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Creates seed project for re-usable AngularJS modules",
   "repository": "https://github.com/maxotek/mams",
   "license": "MIT",
@@ -20,7 +20,7 @@
   "dependencies": {
     "commander": "2.14.1",
     "github-api": "3.0.0",
-    "mx-color-logger": "1.0.4",
+    "mx-color-logger": "1.0.5",
     "nodegit": "^0.21.0"
   },
   "seederRepo": "https://github.com/maxotek/mx-angular-module-seed.git"
