@@ -1,7 +1,7 @@
 {
   "name": "mams",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Creates seed project for re-usable AngularJS modules",
   "repository": "https://github.com/maxotek/mams",
   "license": "MIT",
