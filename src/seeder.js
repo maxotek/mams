@@ -93,7 +93,9 @@ if (createGithubRepo) {
         });
     });
 } else {
-    packageUpdater(projectName, projectName, projectDesc, outputFileName, null, null, null);
+    cloneRepository(function(){
+        packageUpdater(projectName, projectName, projectDesc, outputFileName, null, null, null);
+    });
 }
 
 function cloneRepository(cloneCompleted) {
